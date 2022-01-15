@@ -92,3 +92,11 @@ html::-webkit-scrollbar-thumb {
     background: var(--clr3);
     clip-path: polygon(20% 0%, 80% 0%, 100% 0, 0 0);
 }
+.search-bar input{
+    width: 100%;
+    background: none;
+    border: hidden;
+    text-transform: none;
+    font-size: 1.5 rem;
+    color: #fff;
+}
