@@ -158,6 +158,21 @@ section h4 {
   align-items: center;
   letter-spacing: 0.2rem;
   background: var(--clr4);
+
+  clip-path: polygon(
+    0% 15%,
+    33% 32%,
+    15% 0%,
+    85% 0%,
+    58% 33%,
+    100% 15%,
+    100% 85%,
+    64% 64%,
+    85% 100%,
+    15% 100%,
+    34% 62%,
+    0% 85%
+  );
 }
 section p {
   color: white;
@@ -220,9 +235,45 @@ section p {
   text-transform: capitalize;
   font-weight: 700;
 }
-.about-inner h5:hover{
-    transform: translateX(2rem);
-    transition: 1s ease;
+.about-inner h5:hover {
+  transform: translateX(2rem);
+  transition: 1s ease;
+}
+.about-inner .fa-circle-arrow-right {
+  color: var(--clr4);
+  padding-right: 1rem;
+}
+/* ------------------------------Services */
+.service-content {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  grid-gap: 1rem;
+}
+.inner-box {
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1rem solid var(--clr4);
+  background: white;
+}
+.inner-box:hover {
+  background: var(--clr4);
+  transition: 2s ease all;
+}
+.inner-box img {
+  width: 15rem;
+  height: 15rem;
+}
+.inner-box p{
+    font-size: 1.3rem;
+    color: black;
+}
+.inner-box h2{
+    padding: 2rem 0 ;
+    font-size:2rem ;
+    letter-spacing: 1rem;
+    text-transform: capitalize;
+
 }
 
 /* mediaquery */
