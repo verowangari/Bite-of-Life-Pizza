@@ -57,9 +57,10 @@ html::-webkit-scrollbar-thumb {
 }
 .head .navbar a{
     color: #fff;
-    font-size: 2.6 rem;
+    font-size: 20px;
     font-weight: 600;
     margin: 0 2rem;
+    text-decoration: none;
 }
 .head .navbar a:hover{
     color: black;
@@ -102,4 +103,51 @@ html::-webkit-scrollbar-thumb {
 }
 .search-bar.active{
     border: hidden;
+    transition: -2s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+/* mediaquery */
+/* @media(max-width:991px){
+html{
+    font-size: 55%;
+}
+header{
+    padding: 2rem;
+
+}
+}
+@media(max-width:450px){
+   html{
+       font-size: 50%;
+   } 
+}
+@media (max-width:768px){
+    #bars{
+        display: inline-block;
+    }
+    .search-bar input{
+        width: 100%;
+    }
+    .head.navbar{
+position: absolute;
+top: 100%;
+right: -100%;
+width: 100%;
+background: var(--clr3);
+font-size: 2rem;
+    }
+    .head .navbar a{
+        margin: 2rem 2.5 rem ;
+        display: block;
+        border-right: 1rem solid var(--clr4);
+
+    }
+    .head .navbar a:hover{
+transform: translateX(2rem);
+    }
+    .head .navbar .active{
+        right: -5rem;
+        transition: .4s ease-in ;
+    }
+
+} */
