@@ -63,7 +63,7 @@ html::-webkit-scrollbar-thumb {
 }
 .head .navbar a:hover{
     color: black;
-    transition: 4s ease;
+    transition: -4s ease;
 }
 .head .side-bar i{
  padding: 1.5rem;
@@ -71,4 +71,24 @@ html::-webkit-scrollbar-thumb {
  border: none; 
  background: var(--clr2); 
  color: var(--clr4) ;
+}
+.head .side-bar i:hover{
+    background: var(--clr3);
+    color: var(--clr4);
+    transition: -4s ease;
+}
+#bars{
+    display: none;
+}
+.search-bar{
+    height: 7rem ;
+    padding: 0 1rem;
+    display: flex;
+    position: absolute;
+    top: 99%;
+    left: 50%;
+    right: 0;
+    align-items: center;
+    background: var(--clr3);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 0 0);
 }
