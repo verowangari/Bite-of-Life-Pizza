@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+:root {
+  --clr1: #e36e2c;
+  --clr2: #fff;
+  --clr3: #000;
+  --clr4: #f1932b;
+  --clr5: limegreen;
+}
+/* Style for entire body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+html {
+  font-size: 65%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--clr4);
+}
+/* Styling for head */
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  background: #f1932b;
+  color: #fff;
+  padding: 3rem 9%;
+  align-items: center;
+  justify-content: space-between;
+}
+.head h1 {
+  font-size: 2.5 rem;
+}
+.head fa-pizza-slice {
+  animation: icon 5s ease infinite;
+}
+@keyframes icon {
+  25% {
+    transform: translateY(-1.5rem);
+  }
+  50% {
+    transform: translateY(1.5rem);
+  }
+}
+.head .navbar a{
+    color: #fff;
+    font-size: 2.6 rem;
+    font-weight: 600;
+    margin: 0 2rem;
+}
+.head .navbar a:hover{
+    color: black;
+    transition: 4s ease;
+}
