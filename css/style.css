@@ -277,36 +277,57 @@ section p {
 /* --------------------------------Styling for Menu */
 .menu-content {
   display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
   grid-gap: 1rem;
   flex-wrap: wrap;
 }
-.in-box{
-    padding: 3rem 4rem;
-    text-align: center;
-    border: 1rem solid var(--clr4);
-    background: white;
+.in-box {
+  padding: 3rem 4rem;
+  text-align: center;
+  border: 1rem solid var(--clr4);
+  background: white;
 }
-.in-box:hover{
-    background: var(--clr4);
-    transition: 4s ease all;
-
+.in-box:hover {
+  background: var(--clr4);
+  transition: 4s ease all;
 }
-.in-box img{
-    width: 20rem;
-    height: auto;
+.in-box img {
+  width: 20rem;
+  height: auto;
 }
-.in-box .far{
-    position: absolute;
-    font-size: 2.5rem;
-    margin-left: -7rem;
-    color: black;
-
+.in-box .far {
+  position: absolute;
+  font-size: 2.5rem;
+  margin-left: -7rem;
+  color: black;
 }
-.in-box .veg-icon{
-    margin-left: 22rem;
-    position: absolute;
-    width: 3rem;
-
+.in-box .veg-icon {
+  margin-left: 22rem;
+  position: absolute;
+  width: 3rem;
+}
+.star,
+.price {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: black;
+  text-transform: capitalize;
+}
+.in-content h2, .in-content p{
+font-size: 2rem;
+text-transform: capitalize;
+padding: 1rem 0;
+}
+.fa-star {
+  color: var(--clr5);
+}
+.in-box .far {
+  font-size: 2rem;
+  color: black;
+}
+.in-box .fa-plus-circle{
+    color: var(--clr4);
 }
 
 /* mediaquery */
