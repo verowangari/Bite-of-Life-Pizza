@@ -21,6 +21,7 @@ html {
   scroll-padding-top: 8rem;
   overflow-x: hidden;
 }
+
 html::-webkit-scrollbar {
   width: 1rem;
 }
@@ -106,6 +107,41 @@ html::-webkit-scrollbar-thumb {
     transition: -2s ease;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+/* ----------------------------------------------Home section---------- */
+section{
+    padding: 4rem 9%;
+    margin-top: 8rem;
+}
+.section h3{
+font-size: 3rem;
+color: white;
+text-transform: none;
+text-align: center;
+letter-spacing: .2rem;
+
+}
+section h4{
+    margin: 0 0 1rem 25rem ;
+    padding: .2rem;
+    width: 50%;
+    font-size: 3rem;
+    color: white;
+    text-transform: none;
+    text-align: center;
+    align-items: center;
+    letter-spacing: .2rem;
+    background:var(--clr4) 
+}
+section p{
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    word-wrap: normal;
+    
+
+}
+
 /* mediaquery */
 /* @media(max-width:991px){
 html{
