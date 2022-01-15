@@ -108,12 +108,42 @@ html::-webkit-scrollbar-thumb {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 /* ----------------------------------------------Home section---------- */
+.home {
+    height: 100vh;
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5), url(/assets/pizza2.jpeg) ); */
+    background-image: url(/assets/delicious-pizza.png);
+    background-size: cover;
+    background-position: center;
+}
+.home-content{
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr;
+}
+.inner-content{
+   max-width: 70rem;
+   margin-top: 20rem; 
+   text-align: center;
+}
+.inner-content i{
+    color: var(--clr4);
+
+}
+.inner-content-img{
+    margin-top: 2rem;
+
+}
+.inner-content img{
+    width: 45rem;
+    height: auto;
+    animation: icon 5s ease infinite ;
+}
 section{
     padding: 4rem 9%;
     margin-top: 8rem;
 }
-.section h3{
-font-size: 3rem;
+section h3{
+font-size: 44px;
+font-weight: bolder;
 color: white;
 text-transform: none;
 text-align: center;
@@ -134,11 +164,32 @@ section h4{
 }
 section p{
     color: white;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     text-transform: capitalize;
     line-height: 2.5rem;
     word-wrap: normal;
-    
+}
+.btn{
+    margin-top: 2rem;
+    padding: 1.5rem 4rem ;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    color: black;
+    background: white;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 2rem rgba(255,85,94,0.4);
+    transition: all .3s ease;
+    cursor: pointer;
+    outline: none;
+}
+.btn:hover{
+    background-color: black;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,0.1) ;
+    color: white;
+    transform: translateY();
 
 }
 
