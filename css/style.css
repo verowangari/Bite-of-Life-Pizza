@@ -100,3 +100,6 @@ html::-webkit-scrollbar-thumb {
     font-size: 1.5 rem;
     color: #fff;
 }
+.search-bar.active{
+    border: hidden;
+}
