@@ -10,7 +10,7 @@ window.onscroll = () => {
 
 let menu = document.querySelector(".head .navbar");
 // document.querySelector('#bars').onclick()=()=>{
-//    MediaElementAudioSourceNode.classList.toggle('active');
+
 
 // }
 menu.onclick = () => {
@@ -38,25 +38,20 @@ $(document).ready(function () {
     $.each($("input[name='toppings']:checked"), function () {
       pizatopping.push($(this).val());
     });
-    //  console.log(pizatopping.join(", "));
 
     switch (pizasize) {
       case "0":
         price = 0;
         break;
       case "large":
-        price = 1200;
-        //  console.log(price);
+        price = 1500;
         break;
       case "medium":
-        price = 850;
-        //  console.log("The price is "+price);
+        price = 1250;
         break;
       case "small":
-        price = 600;
-      //  console.log(price);
-      //  default:
-      //  console.log("error");
+        price = 900;
+      
     }
     switch (pizacrust) {
       case "0":
@@ -72,21 +67,16 @@ $(document).ready(function () {
         crust_price = 200;
         break;
       // default:
-      // console.log("No price");
     }
     let topping_value = pizatopping.length * 100;
-    // console.log("toppins value" + topping_value);
 
     if (pizasize == " " && pizacrust == " ") {
-      // console.log("nothing selected");
-      // $("button.continue").show();
-      // $("#order-text").show();
       $("div.final-output").hide();
       alert(" Please fill your order ");
     } else {
       $("button.continue").hide();
       $("#order-text").hide();
-      $("div.final-output").slideDown(2000);
+      $("div.final-output").slideDown(1200);
     }
 
     total = price + crust_price + topping_value;
@@ -110,49 +100,14 @@ $(document).ready(function () {
         pizatopping.push($(this).val());
       });
 
-      // console.log(pizatopping.join(", "));
-      // switch (pizasize) {
-      //   case "0":
-      //     price = 0;
-      //     break;
-      //   case "large":
-      //     price = 1500;
-      //     // console.log(price);
-      //     break;
-      //   case "medium":
-      //     price = 1250;
-      //     console.log("The price is " + price);
-      //     break;
-      //   case "small":
-      //     price = 900;
-      //     console.log(price);
-      //   default:
-      //     console.log("error");
-      // }
-      // switch (pizacrust) {
-      //   case "0":
-      //     crust_price = 0;
-      //     break;
-      //   case "Cracker":
-      //     crust_price = 100;
-      //     break;
-      //   case "Cheese":
-      //     crust_price = 150;
-      //     break;
-      //   case "Flat-Bread ":
-      //     crust_price = 200;
-      //     break;
-      //   default:
-      //     console.log("No price");
-      // }
+     
+      
       let topping_value = pizatopping.length * 100;
-      // console.log("toppins value" + topping_value);
+      
       total = price + crust_price + topping_value;
-      // console.log(total);
+      
 
       checkoutTotal = checkoutTotal + total;
-      // console.log(checkoutTotal);
-      // constractor function
       var newOrder = new Getpizza(
         pizaname,
         pizasize,
@@ -161,32 +116,16 @@ $(document).ready(function () {
         total
       );
 
-      // $("#placeorders").append(
-      //   '<tr><td id="pizza-type">' +
-      //     newOrder.name +
-      //     '</td><td id="pizza-proportion">' +
-      //     newOrder.proportion +
-      //     '</td><td id="pizzacrust">' +
-      //     newOrder.crust +
-      //     '</td><td id="withtopping">' +
-      //     newOrder.topping +
-      //     '</td><td id="totalcost">' +
-      //     newOrder.total +
-      //     "</td></tr>"
-      // );
-      // console.log(newOrder);
     });
     // Checkout button
     $("button#checkout").click(function () {
       $("button#checkout").hide();
       $("button.addmore").hide();
       $("button.homedeliver").slideDown(1000);
-      // $("#free-delivery").slideDown(1000);
-      // console.log("Your total bills is sh. " + checkoutTotal);
       $("#totalpaying").append("Total: Ksh " + checkoutTotal);
     });
 
-    // home delivery button
+    //  delivery button
     $("button.homedeliver").click(function () {
       $(".summary-table").hide();
       $(".final-output h2").hide();
@@ -196,20 +135,19 @@ $(document).ready(function () {
       $("#totalpaying").hide();
       $("button.addmore").hide();
       let feedelivery = checkoutTotal + 0;
-      // console.log("You will pay sh. " + feedelivery + " on delivery");
       $("#totalpayingcost").append("Grandtotal: " + feedelivery);
     });
 
-    // when one clicks place order button
+    // Finishing
     $("button#finish-order").click(function (event) {
       event.preventDefault();
 
       $("#totalpaying").hide();
       $(".delivery").hide();
       $("button#finish-order").hide();
+      $("button#checkout").hide()
       let feedelivery = checkoutTotal + 0;
-      console.log("Final Bill is: " + feedelivery);
-      let person = $("input#name").val();
+      let customer = $("input#name").val();
       let phone = $("input#phone").val();
       let location = $("input#location").val();
 
@@ -219,16 +157,14 @@ $(document).ready(function () {
         $("input#location").val() != ""
       ) {
         $("#display-text").append(
-          person +
-            ", We have recieved your order and it will be delivered to you at " +
-            location +
-            ". Prepare sh. " +
-            deliceryamount
+          "Hi," + customer +
+            "! Thank you for shopping with us. Your order will be delivered to " +
+            location 
         );
         $("#totalpayingcost").hide();
-        $("#display-text").slideDown(1200);
+        $("#display-text").slideDown(1000);
       } else {
-        alert("Please fill in the details for delivery!");
+        alert("Enter your details");
         $(".delivery").show();
         $("button#finish-order").show();
       }
