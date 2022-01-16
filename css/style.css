@@ -111,14 +111,18 @@ html::-webkit-scrollbar-thumb {
 .home {
   height: 100vh;
   /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5), url(/assets/pizza2.jpeg) ); */
-  background-image: url(/assets/delicious-pizza.png);
+  background-image: url(/assets/back2.jpg);
   background-size: cover;
   background-position: center;
 }
-.home-content {
+.home p {
+  font-size: 2.7rem;
+}
+/* .home-content {
   display: grid;
   grid-template-columns: 1.2fr 1.2fr;
-}
+} */
+
 .inner-content {
   max-width: 70rem;
   margin-top: 20rem;
@@ -127,14 +131,17 @@ html::-webkit-scrollbar-thumb {
 .inner-content i {
   color: var(--clr4);
 }
-.inner-content-img {
+.inner-content h3 {
+  font-size: 61px;
+}
+/* .inner-content-img {
   margin-top: 2rem;
 }
 .inner-content img {
   width: 45rem;
   height: auto;
   animation: icon 5s ease infinite;
-}
+} */
 section {
   padding: 4rem 9%;
   margin-top: 8rem;
@@ -148,10 +155,11 @@ section h3 {
   letter-spacing: 0.2rem;
 }
 section h4 {
-  margin: 0 0 1rem 25rem;
-  padding: 0.2rem;
+  margin: 0 0 1rem 35rem;
+  padding: 0.8rem;
   width: 50%;
-  font-size: 3rem;
+  font-size: 5rem;
+  font-weight: bold;
   color: white;
   text-transform: none;
   text-align: center;
@@ -176,7 +184,7 @@ section h4 {
 }
 section p {
   color: white;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-transform: capitalize;
   line-height: 2.5rem;
   word-wrap: normal;
@@ -184,7 +192,7 @@ section p {
 .btn {
   margin-top: 2rem;
   padding: 1.5rem 4rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-weight: 500;
@@ -203,7 +211,10 @@ section p {
   color: white;
   transform: translateY();
 }
-/* ------------------------------------------------About section -------*/
+/* ----------------------------------------------------------------ABOUT section -------*/
+.about {
+  overflow: hidden;
+}
 .about-sec {
   display: grid;
   grid-template-columns: 1.2fr 1.2fr;
@@ -215,7 +226,7 @@ section p {
   animation: icon 4s ease infinite;
 }
 .about-content h3 {
-  background-image: url(/assets/delicious-pizza.png);
+  background-image: url(/assets/back2.jpg);
   background-size: cover;
   background-position: center;
   color: var(--clr4);
@@ -330,49 +341,56 @@ section p {
 .in-box .fa-plus-circle {
   color: var(--clr4);
 }
-/* ---------------------------Blog */
-.inner-blog {
-  display: grid;
-  grid-template-columns: 1.2fr 1.2fr 1.2fr;
-  grid-gap: 1rem;
-}
-.blog-content {
-  position: relative;
-  background: white;
-}
-.in {
-  height: 20rem;
-  position: relative;
-}
+/* ------------------------------------------------------------------BLOG---------- */
 .in img {
-  height: 100%;
-  width: 100%;
+  height: 200px;
   object-fit: cover;
-}
-.in-blog-content {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  justify-content: space-between;
-  background: black;
-  text-align: center;
-  padding: 2.5rem;
-  background: white;
-}
-.in-blog-icon a {
-  font-size: 1.5rem;
-  color: white;
-  text-transform: capitalize;
-}
-.in-blog-icon i {
-  padding-right: 0.5rem;
-  color: white;
 }
 .in-blog-contents h2,
 .in-blog-contents p {
   color: black;
 }
-/* ----------------------------------------------contactus-------------- */
+.in-blog-icon {
+  display: flex;
+}
+.in {
+    height: 20rem;
+    position: relative;
+  }
+  .in-blog-icon i {
+    padding-right: 0.5rem;
+    color: white;
+  }
+  .in-blog-content {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background: black;
+    text-align: center;
+    padding: .5rem;
+    background: white;
+  }
+/* .inner-blog {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  grid-gap: 1rem;
+} */
+/* .blog-content {
+  position: relative;
+  background: white;
+}
+
+
+
+.in-blog-icon a {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
+}
+
+ */
+/* --------------------------------------------------------------------------------------CONTACT US-------------- */
 .contact {
   padding-top: 3rem;
 }
@@ -441,18 +459,26 @@ textarea {
   letter-spacing: 1rem;
   font-size: 1.5rem;
 }
-.social i{
-    padding: 1rem;
-    background: var(--clr4);
-    color: white;
-    font-size: 1.5rem;
-
+.social i {
+  padding: 1rem;
+  background: var(--clr4);
+  color: white;
+  font-size: 1.5rem;
 }
-.social i:hover{
-    transform: translateY(-2rem);
-    color: white;
-    cursor: pointer;
-    transition: 1s ease;
+.social i:hover {
+  transform: translateY(-2rem);
+  color: white;
+  cursor: pointer;
+  transition: 1s ease;
+}
+/* ---------------------------------------------------------------------------------------------------------ORDERCSS */
+.order-content h3{
+    font-size: 44px;
+  font-weight: bolder;
+  color: black;
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0.2rem;
 }
 /* mediaquery */
 /* @media(max-width:991px){
