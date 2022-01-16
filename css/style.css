@@ -359,19 +359,67 @@ section p {
   padding: 2.5rem;
   background: white;
 }
-.in-blog-icon a{
-    font-size: 1.5rem;
-    color: white;
-    text-transform: capitalize;
-
+.in-blog-icon a {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
 }
-.in-blog-icon i{
-    padding-right: .5rem;
-    color: white;
-
+.in-blog-icon i {
+  padding-right: 0.5rem;
+  color: white;
 }
-.in-blog-contents h2, .in-blog-contents p{
-    color: black;
+.in-blog-contents h2,
+.in-blog-contents p {
+  color: black;
+}
+/* ----------------------------------------------contactus-------------- */
+.contact {
+  padding-top: 3rem;
+}
+.contact-sec {
+  width: 100%;
+}
+.contact-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contact-inner-col {
+  margin: 2rem;
+  flex: 1 1 20rem;
+  text-align: center;
+}
+.contact-inner-col img {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem;
+  padding: 1rem;
+}
+.contact-inner-col h1 {
+  padding: 1rem 0;
+  color: var(--clr4);
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  text-transform: capitalize;
+}
+.contact-inner-col p {
+  padding: 5rem;
+  line-height: 11.5rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #aaa;
+}
+.contact-inner-col input,
+.contact-inner-col textarea {
+  width: 80%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-bottom: 0.3rem solid var(--clr4);
+}
+textarea{
+    resize: none;
 }
 /* mediaquery */
 /* @media(max-width:991px){
