@@ -103,13 +103,13 @@ $(document).ready(function(){
     checkoutTotal = checkoutTotal + total;
 
     $("#pizza-type").html($(".name option:selected").val());
-    $("#pizzasize").html( $("#proportion option:selected").val());
+    $("#pizza-proportion").html( $("#proportion option:selected").val());
     $("#pizzacrust").html($("#crust option:selected").val());
-    $("#pizzatopping").html(ptopping.join(", "));
-    $("#totals").html(total);
+    $("#withtopping").html(ptopping.join(", "));
+    $("#totalcost").html(total);
     
 // Add pizza button
-    $("button.addPizza").click(function(){
+    $("button.addmore").click(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#proportion option:selected").val();
       let pcrust = $("#crust option:selected").val();
@@ -162,7 +162,7 @@ $(document).ready(function(){
       // constractor function
       var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
 
-      $("#placeorders").append('<tr><td id="pizza-type">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.proportion + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+      $("#placeorders").append('<tr><td id="pizza-type">'+newOrder.name +'</td><td id="pizza-proportion">' + newOrder.proportion + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="withtopping">'+newOrder.topping+'</td><td id="totalcost">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
       
       
@@ -171,34 +171,34 @@ $(document).ready(function(){
     // Checkout button
     $("button#checkout").click(function(){ 
       $("button#checkout").hide();
-      $("button.addPizza").hide();
-      $("button.deliver").slideDown(1000);
-      $("#addedprice").slideDown(1000);
+      $("button.addmore").hide();
+      $("button.homedeliver").slideDown(1000);
+      $("#free-delivery").slideDown(1000);
       console.log("Your total bills is sh. "+checkoutTotal);
-      $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
+      $("#totalpaying").append("Your bill is sh. "+checkoutTotal);
     });
 
     // home delivery button
-    $("button.deliver").click(function(){
+    $("button.homedeliver").click(function(){
       $(".summary-table").hide();
       $(".final-output h2").hide();
       $(".delivery").slideDown(1000);
-      $("#addedprice").hide();
-      $("button.deliver").hide();
-      $("#pizzatotal").hide();
-      let deliceryamount= checkoutTotal+150;
+      $("#free-delivery").hide();
+      $("button.homedeliver").hide();
+      $("#totalpaying").hide();
+      let deliceryamount= checkoutTotal+0;
       console.log("You will pay sh. "+deliceryamount+" on delivery");
-      $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
+      $("#totalpayingcost").append("Your bill plus delivery fee is: "+deliceryamount);
     });
 
     // when one clicks place order button
-    $("button#final-order").click(function(event){
+    $("button#finish-order").click(function(event){
       event.preventDefault();
 
-      $("#pizzatotal").hide();
+      $("#totalpaying").hide();
       $(".delivery").hide();
-      $("button#final-order").hide();
-      let deliceryamount= checkoutTotal+150;
+      $("button#finish-order").hide();
+      let deliceryamount= checkoutTotal+0;
       console.log("Final Bill is: "+deliceryamount);
       let person = $("input#name").val();
       let phone = $("input#phone").val();
@@ -206,14 +206,14 @@ $(document).ready(function(){
 
       if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
   
-        $("#finallmessage").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliceryamount);
-        $("#totalbill").hide();
-        $("#finallmessage").slideDown(1200);
+        $("#display-text").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliceryamount);
+        $("#totalpayingcost").hide();
+        $("#display-text").slideDown(1200);
       }
       else {
         alert("Please fill in the details for delivery!");
         $(".delivery").show();
-        $("button#final-order").show();
+        $("button#finish-order").show();
       }
     });
    event.preventDefault();
