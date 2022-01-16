@@ -104,14 +104,14 @@ html::-webkit-scrollbar-thumb {
 }
 .search-bar.active {
   border: hidden;
-  transition: -2s ease;
+  transition: .2s ease;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 /* ----------------------------------------------Home section---------- */
 .home {
   height: 100vh;
   /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5), url(/assets/pizza2.jpeg) ); */
-  background-image: url(/assets/back2.jpg);
+  background-image: url(../assets/back2.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -226,7 +226,7 @@ section p {
   animation: icon 4s ease infinite;
 }
 .about-content h3 {
-  background-image: url(/assets/back2.jpg);
+  background-image: url(../assets/back2.jpg);
   background-size: cover;
   background-position: center;
   color: var(--clr4);
@@ -474,7 +474,7 @@ textarea {
 /* ---------------------------------------------------------------------------------------------------------ORDERCSS */
 .order-content{
     /* width: 100%; */
-    background-image: url(../assets/back3.jpeg);
+    background-image: url(../assets/back2.jpg);
     background-size: cover;
     background-position: center;
     padding-top: 3%;
@@ -511,6 +511,24 @@ textarea {
 .form-content .row{
     border: 3px solid #e36e2c;
 }
+.final-output{
+    display: none;
+    color: white;
+    font-size: 2.6rem;
+    background:var(--clr4);
+}
+td,th{
+    font-size: 2.4rem;
+    color: white;
+  }
+  .order-content label{
+      font-size: 1.6rem;
+      color: white;
+  }
+  select{
+      font-size: 1rem;
+      display: grid;
+  }
 /* mediaquery */
 /* @media(max-width:991px){
 html{
