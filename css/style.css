@@ -472,13 +472,44 @@ textarea {
   transition: 1s ease;
 }
 /* ---------------------------------------------------------------------------------------------------------ORDERCSS */
-.order-content h3{
-    font-size: 44px;
-  font-weight: bolder;
-  color: black;
-  text-transform: none;
-  text-align: center;
-  letter-spacing: 0.2rem;
+.order-content{
+    /* width: 100%; */
+    background-image: url(../assets/back3.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 3%;
+    padding-bottom: 2rem;
+}
+
+.order-content .btn{
+    
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        padding: 1.5rem 2rem ;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        color: black;
+        background: white;
+        border: none;
+        border-radius: 0.5rem;
+        box-shadow: 0 2rem 2rem rgba(255, 85, 94, 0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+      
+}
+.order-content input{
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-bottom: 0.3rem solid var(--clr4);
+}
+.form-content .row{
+    border: 3px solid #e36e2c;
 }
 /* mediaquery */
 /* @media(max-width:991px){
