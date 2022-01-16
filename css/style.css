@@ -314,10 +314,11 @@ section p {
   color: black;
   text-transform: capitalize;
 }
-.in-content h2, .in-content p{
-font-size: 2rem;
-text-transform: capitalize;
-padding: 1rem 0;
+.in-content h2,
+.in-content p {
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding: 1rem 0;
 }
 .fa-star {
   color: var(--clr5);
@@ -326,10 +327,52 @@ padding: 1rem 0;
   font-size: 2rem;
   color: black;
 }
-.in-box .fa-plus-circle{
-    color: var(--clr4);
+.in-box .fa-plus-circle {
+  color: var(--clr4);
 }
+/* ---------------------------Blog */
+.inner-blog {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
+  grid-gap: 1rem;
+}
+.blog-content {
+  position: relative;
+  background: white;
+}
+.in {
+  height: 20rem;
+  position: relative;
+}
+.in img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.in-blog-content {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  background: black;
+  text-align: center;
+  padding: 2.5rem;
+  background: white;
+}
+.in-blog-icon a{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: capitalize;
 
+}
+.in-blog-icon i{
+    padding-right: .5rem;
+    color: white;
+
+}
+.in-blog-contents h2, .in-blog-contents p{
+    color: black;
+}
 /* mediaquery */
 /* @media(max-width:991px){
 html{
