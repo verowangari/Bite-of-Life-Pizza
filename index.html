@@ -31,7 +31,7 @@
       <div class="side-bar">
         <i class="fas fa-search" id="search"> </i>
         <i class="fas fa-user" id="user"></i>
-        <i class="fas fa-bars" id="bars"></i>
+        <!-- <i class="fas fa-bars" id="bars"></i> -->
       </div>
       <form action="#" class="search-bar">
         <input type="search" name="search" id="1" placeholder="Search Here" />
@@ -51,6 +51,7 @@
             Exciting offers and discounts. Get quality pizza at affordable prices.
             Wonderful experience per bite!
           </p>
+          
           <button class="btn">Menu</button>
         </div>
         
@@ -433,9 +434,9 @@
               <label for="select">Pick Your Size</label>
               <select class="browser-default custom-select custom-select-md mb-3" id="proportion">
                
-                <option value="large">Large -- sh. 1500</option>
-                <option value="medium">Medium -- sh. 1250</option>
-                <option value="small">Small -- sh. 900</option>
+                <option value="large">Large Ksh 1500</option>
+                <option value="medium">Medium Ksh 1250</option>
+                <option value="small">Small Ksh 900</option>
               </select>
               <label for="crust">Pick a crust of your choice</label>
                 <select class="browser-default custom-select custom-select-md mb-3" id="crust">
@@ -482,21 +483,21 @@
                   <tbody id="placeorders">
                     <tr>
                       <td id="pizza-type"></td>
-                      <td id="pizzasize"></td>
-                      <td id="pizzacrust"></td>
-                      <td id="pizzatopping"></td>
-                      <td id="totals"></td>
+                      <td id="pizza-proportion"></td>
+                      <td id="withcrust"></td>
+                      <td id="withtopping"></td>
+                      <td id="totalcost"></td>
                     </tr>                  
                   </tbody>
                 </table>
-                <p id="pizzatotal"></p>
-                <p id="totalbill"></p> 
-                <p id="addedprice"> Enjoy the benefit of Free-Delivery!</p>
-                <p id="finallmessage"></p>
+                <p id="totalpaying"></p>
+                <p id="totalpayingcost"></p> 
+                <p id="free-delivery"> Enjoy the benefit of Free-Delivery!</p>
+                <p id="display-text"></p>
               </div>
-              <button class="btn  addPizza">Add Pizza</button>
+              <button class="btn  addmore"> Add More?</button>
               <button class="btn " id="checkout">Checkout</button>
-              <button class="btn  deliver">Home delivery?</button>
+              <button class="btn  homedeliver">Home delivery?</button>
             </div>
             <div class="delivery">
                 <form action="#">
@@ -504,7 +505,7 @@
                     <input type="text" id="name" class="form-control mb-3" placeholder=" Your Name">
                     <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
                     <input type="text" id="location" class="form-control mb-3" placeholder="Your Location">
-                    <button class="btn " id="final-order">Place Order</button>
+                    <button class="btn " id="finish-order">Finish Order</button>
                   </div>
                 </form>
             </div>
@@ -514,7 +515,7 @@
   </div>
         <!-- --------------------------------------------------------------------------------------------------------------------------ENDORDERTRIAL -->
     </section>
-    <!-- ----------------------------------------------------------------------------CONTACT -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------CONTACT -->
     <footer class="contact" id="contact">
         <div class="contact-sec">
             <div class="contact-inner">
@@ -530,8 +531,9 @@
                         <input type="email" name="name" id="" placeholder="Enter your email" required>
                         <input type="text" name="name" id="" placeholder="Enter your phoneNumber" required>
                         <textarea name="" id="" cols="10" rows="8"></textarea>
-                        <button class="btn">Submit</button>
+                       
                     </form>
+                    <button class="btn">Submit</button>
                 </div>
             </div>
             <div class="map">
