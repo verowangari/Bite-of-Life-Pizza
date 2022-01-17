@@ -17,6 +17,14 @@ menu.onclick = () => {
   menu.classList.toggle("active");
 };
 
+// -----------------------------------------------------------------------------------------------ADD TO CART TRIAL
+
+$(document).ready(function(){
+  $("button#cart").click(function(){
+    $("section.order").slideDown(1200);
+  })
+})
+
 // ------------------------------------------------------------------PIZZAJSTRY----------
 // var price , crust_price, topping_price ;
 let total = 0;
@@ -28,7 +36,7 @@ function Getpizza(name, proportion, crust, topping, total) {
   this.total = total;
 }
 
-// continue button
+// ------------------------------------------------------continue button
 $(document).ready(function () {
   $("button.continue").click(function (event) {
     let pizaname = $(".name option:selected").val();
@@ -90,7 +98,7 @@ $(document).ready(function () {
     $("#withtopping").html(pizatopping.join(", "));
     $("#totalcost").html(total);
 
-    // Add pizza button
+    // --------------------------------------------------------------------------------Add pizza button
     $("button.addmore").click(function () {
       let pizaname = $(".name option:selected").val();
       let pizasize = $("#proportion option:selected").val();
@@ -117,7 +125,7 @@ $(document).ready(function () {
       );
 
     });
-    // Checkout button
+    // --------------------------------------------------------------------------Checkout button
     $("button#checkout").click(function () {
       $("button#checkout").hide();
       $("button.addmore").hide();
@@ -125,7 +133,7 @@ $(document).ready(function () {
       $("#totalpaying").append("Total: Ksh " + checkoutTotal);
     });
 
-    //  delivery button
+    //  ----------------------------------------------------------------delivery button
     $("button.homedeliver").click(function () {
       $(".summary-table").hide();
       $(".final-output h2").hide();
@@ -138,7 +146,7 @@ $(document).ready(function () {
       $("#totalpayingcost").append("Grandtotal: " + feedelivery);
     });
 
-    // Finishing
+    // -------------------------------------------------------------------------Finishing
     $("button#finish-order").click(function (event) {
       event.preventDefault();
 
