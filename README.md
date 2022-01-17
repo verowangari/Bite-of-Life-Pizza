@@ -4,7 +4,7 @@ A landing page
 #### By 
 Veronica Wangari
 ## Description
-A landing page for pizza place
+A landing page for pizza place. It allows users to place orders and contact admin.
 ## Link to Github Pages
 
 ## Setup/Installation Requirement
@@ -14,8 +14,12 @@ A landing page for pizza place
 There are no issues, it runs just fine.
 ## Technologies Used
 1) HTML <br> 2) CSS <br> 3) BootStrap <br> 4) JS
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 ## Support and contact details
 Email: verowangari34@gmail.com
 ## License
 Copyright (c) 2022 Veronica Wangari
-This project is under [MIT]LICENSE
+This project is under [MIT] LICENSE (https://choosealicense.com/licenses/mit/)
+ ## Visuals
+ /home/moringa/Pictures/Screenshot from 2022-01-17 09-49-46.png
