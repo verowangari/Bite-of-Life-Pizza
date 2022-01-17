@@ -13,7 +13,7 @@ Veronica Wangari
 A landing page for pizza place. It allows users to place orders and contact admin.
 
 ## Link to Github Pages
-
+https://verowangari.github.io/Bite-of-Life-Pizza/
 ## Setup/Installation Requirement
 
 1. Install Visual Studio <br> 2) Create a github account. <br> 3) Install git <br> 4) Create a repository <br> 5) Code <br> 6) Push to github <br>7) Put the site into use
