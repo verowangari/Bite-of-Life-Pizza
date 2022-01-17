@@ -2,7 +2,7 @@
 
 #### Brief description of application
 
-A landing page
+A landing page for pizza
 
 #### By
 
