@@ -357,7 +357,7 @@
                 <option value="small">Small Ksh 900</option>
               </select>
                 <label for="select"> AVAILABLE FLAVORS</label>
-                <select class="form-control name">
+                <select class="form-control name" id="pizatype">
                   
                   <option value="Margherita Sushi Pizza">Margherita Sushi Pizza</option>
                   <option value="Italian Cuisine Tomato Pizza">Italian Cuisine Tomato Pizza</option>
@@ -398,17 +398,14 @@
               <p>Deliveries are done within the same day.</p>
             </div>
             <div class="final-output">
-              <p>You just ordered:</p>
+              <p id="statement">You just ordered:</p>
               <div id="total-orders">
-                <table class="table  summary-table">
-                  <tbody id="placeorders">
-                    <tr>
-                      <td id="pizza-type"></td>
-                      <td id="pizza-proportion"></td>
-                      <!-- <td id="totalcost"></td> -->
-                    </tr>                  
-                  </tbody>
-                </table>
+                    <ul id="placeorders">
+                      <li id="pizza-type"></li>
+                      <li id="pizza-proportion"></li>
+                      <li id="pizza-crust"></li>
+                      <!-- <li id="totalcost"> </li> -->
+                    </ul>                  
                 <p id="totalpaying"></p>
                 <p id="totalpayingcost"></p> 
                 <p id="free-delivery"> Enjoy the benefit of Free-Delivery!</p>

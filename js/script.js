@@ -38,7 +38,7 @@ function Getpizza(name, proportion, crust, topping, total) {
 // ------------------------------------------------------continue button
 $(document).ready(function () {
   $("button.continue").click(function (event) {
-    let pizaname = $(".name option:selected").val();
+    let pizaname = $("#pizatype option:selected").val();
     let pizasize = $("#proportion option:selected").val();
     let pizacrust = $("#crust option:selected").val();
     let pizatopping = [];
@@ -47,9 +47,6 @@ $(document).ready(function () {
     });
 
     switch (pizasize) {
-      case "0":
-        price = 0;
-        break;
       case "large":
         price = 1500;
         break;
@@ -60,9 +57,6 @@ $(document).ready(function () {
         price = 900;
     }
     switch (pizacrust) {
-      case "0":
-        crust_price = 0;
-        break;
       case "Cracker":
         crust_price = 100;
         break;
@@ -72,7 +66,7 @@ $(document).ready(function () {
       case "Flat-Bread ":
         crust_price = 200;
         break;
-      // default:
+      default:
     }
     let topping_value = pizatopping.length * 100;
 
@@ -92,6 +86,8 @@ $(document).ready(function () {
 
     $("#pizza-type").html($(".name option:selected").val());
     $("#totalcost").html(total);
+    $("#pizza-proportion").html($("#proportion option:selected").val());
+    $("#pizza-crust").html($("#crust option:selected").val());
 
     // --------------------------------------------------------------------------------Add pizza button
     $("button.addmore").click(function () {
