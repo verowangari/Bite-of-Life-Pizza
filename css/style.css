@@ -523,6 +523,8 @@ textarea {
 }
 .final-output {
   display: none;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr;
   color: white;
   font-size: 1.7rem;
   background: var(--clr4);

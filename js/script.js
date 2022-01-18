@@ -82,7 +82,7 @@ $(document).ready(function () {
     } else {
       $("button.continue").hide();
       $("#order-text").hide();
-      $("div.final-output").slideDown(200);
+      $("div.final-output").slideDown();
     }
 
     total = price + crust_price + topping_value;

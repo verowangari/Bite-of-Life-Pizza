@@ -376,8 +376,9 @@
                 </select>
               <label for="Toppings"> AVAILABLE TOPPINGS </label>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="potato" value="potato" name="toppings">
                   <label class="form-check-label" for="potato">Potato</label>
+                  <input type="checkbox" class="form-check-input" id="potato" value="potato" name="toppings">
+                  
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="Bacon" value="Bacon" name="toppings">
@@ -385,7 +386,7 @@
                 </div>
                 <div class="form-check">
                   <input type="checkbox" class="form-check-input" id="pancetta" value="pancetta" name="toppings">
-                  <label class="custom-control-label" for="pancetta">pancetta</label>
+                  <label class="form-check-label" for="pancetta">pancetta</label>
                 </div> <br><br><br>
                 
               <button type="submit" class="btn continue"> Continue?</button>
@@ -397,15 +398,13 @@
               <p>Deliveries are done within the same day.</p>
             </div>
             <div class="final-output">
-              <h2> Order Summary</h2>
+              <p>You just ordered:</p>
               <div id="total-orders">
                 <table class="table  summary-table">
                   <tbody id="placeorders">
                     <tr>
                       <td id="pizza-type"></td>
                       <td id="pizza-proportion"></td>
-                      <!-- <td id="withcrust"></td> -->
-                      <!-- <td id="withtopping"></td> -->
                       <!-- <td id="totalcost"></td> -->
                     </tr>                  
                   </tbody>
