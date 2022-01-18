@@ -58,7 +58,7 @@ section h4 {
   text-align: center;
   align-items: center;
   letter-spacing: 0.2rem;
-  background: var(--clr4);
+  background: var(--clr1);
   -webkit-clip-path: polygon(
     0% 15%,
     25% 24%,
@@ -546,9 +546,13 @@ select {
   height: 100vh;
 }
 /* ------------------------------------------------------------------------------------------------------------------------time-to-order */
-.time-to-order{
-  background-image: url(../assets/back2.jpg);
-}
+.order-content h3{
+  font-size: 5.7rem;
+  color: var(--clr1);
+  }
+  .delivery h2{
+    color:var(--clr1);
+  }
 /* mediaquery */
 /* @media(max-width:991px){
 html{
