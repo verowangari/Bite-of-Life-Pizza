@@ -93,7 +93,7 @@ $(document).ready(function () {
     $("button.addmore").click(function () {
       let pizaname = $(".name option:selected").val();
       let pizasize = $("#proportion option:selected").val();
-      let pizacrust = $("#crust option:selected").val();
+      // let pizacrust = $("#crust option:selected").val();
       let pizatopping = [];
       $.each(new $("input[name='toppings']:checked"), function () {
         pizatopping.push($(this).val());
