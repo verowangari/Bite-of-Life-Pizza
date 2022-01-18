@@ -130,7 +130,7 @@ $(document).ready(function () {
       $("#totalpaying").hide();
       $("button.addmore").hide();
       let feedelivery = checkoutTotal + 0;
-      $("#totalpayingcost").append("Grandtotal: " + feedelivery);
+      $("#totalpayingcost").append("Grandtotal: " + feedelive);
     });
 
     // -------------------------------------------------------------------------Finishing
