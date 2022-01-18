@@ -545,6 +545,10 @@ select {
 .order{
   height: 100vh;
 }
+/* ------------------------------------------------------------------------------------------------------------------------time-to-order */
+.time-to-order{
+  background-image: url(../assets/back2.jpg);
+}
 /* mediaquery */
 /* @media(max-width:991px){
 html{
