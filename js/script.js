@@ -11,7 +11,6 @@ window.onscroll = () => {
 let menu = document.querySelector(".head .navbar");
 // document.querySelector('#bars').onclick()=()=>{
 
-
 // }
 menu.onclick = () => {
   menu.classList.toggle("active");
@@ -19,14 +18,14 @@ menu.onclick = () => {
 
 // -----------------------------------------------------------------------------------------------ADD TO CART TRIAL
 
-$(document).ready(function(){
-  $("button#cart").click(function(){
-    $("section.order").slideDown(1200);
-  })
-})
+$(document).ready(function () {
+  $("button#cart").click(function () {
+    $("section.order").slideDown(600);
+  });
+});
 
 // ------------------------------------------------------------------PIZZAJSTRY----------
-// var price , crust_price, topping_price ;
+
 let total = 0;
 function Getpizza(name, proportion, crust, topping, total) {
   this.name = name;
@@ -59,7 +58,6 @@ $(document).ready(function () {
         break;
       case "small":
         price = 900;
-      
     }
     switch (pizacrust) {
       case "0":
@@ -84,7 +82,7 @@ $(document).ready(function () {
     } else {
       $("button.continue").hide();
       $("#order-text").hide();
-      $("div.final-output").slideDown(1200);
+      $("div.final-output").slideDown(200);
     }
 
     total = price + crust_price + topping_value;
@@ -93,9 +91,6 @@ $(document).ready(function () {
     checkoutTotal = checkoutTotal + total;
 
     $("#pizza-type").html($(".name option:selected").val());
-    $("#pizza-proportion").html($("#proportion option:selected").val());
-    $("#pizzacrust").html($("#crust option:selected").val());
-    $("#withtopping").html(pizatopping.join(", "));
     $("#totalcost").html(total);
 
     // --------------------------------------------------------------------------------Add pizza button
@@ -108,12 +103,9 @@ $(document).ready(function () {
         pizatopping.push($(this).val());
       });
 
-     
-      
       let topping_value = pizatopping.length * 100;
-      
+
       total = price + crust_price + topping_value;
-      
 
       checkoutTotal = checkoutTotal + total;
       var newOrder = new Getpizza(
@@ -123,13 +115,12 @@ $(document).ready(function () {
         pizatopping,
         total
       );
-
     });
     // --------------------------------------------------------------------------Checkout button
     $("button#checkout").click(function () {
       $("button#checkout").hide();
       $("button.addmore").hide();
-      $("button.homedeliver").slideDown(1000);
+      $("button.homedeliver").slideDown(100);
       $("#totalpaying").append("Total: Ksh " + checkoutTotal);
     });
 
@@ -137,7 +128,7 @@ $(document).ready(function () {
     $("button.homedeliver").click(function () {
       $(".summary-table").hide();
       $(".final-output h2").hide();
-      $(".delivery").slideDown(1000);
+      $(".delivery").slideDown(100);
       $("#free-delivery").hide();
       $("button.homedeliver").hide();
       $("#totalpaying").hide();
@@ -153,7 +144,7 @@ $(document).ready(function () {
       $("#totalpaying").hide();
       $(".delivery").hide();
       $("button#finish-order").hide();
-      $("button#checkout").hide()
+      $("button#checkout").hide();
       let feedelivery = checkoutTotal + 0;
       let customer = $("input#name").val();
       let phone = $("input#phone").val();
@@ -165,9 +156,10 @@ $(document).ready(function () {
         $("input#location").val() != ""
       ) {
         $("#display-text").append(
-          "Hi," + customer +
+          "Hi," +
+            customer +
             "! Thank you for shopping with us. Your order will be delivered to " +
-            location 
+            location
         );
         $("#totalpayingcost").hide();
         $("#display-text").slideDown(1000);
